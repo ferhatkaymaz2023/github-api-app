@@ -31,6 +31,10 @@
             localStorage.setItem('searched',JSON.stringify(users));
         }
 
+        static clearAllSearchedFromStorage()
+        {
+            localStorage.removeItem('searched');
+        }
 
 
     }

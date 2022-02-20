@@ -12,6 +12,7 @@ function addEventListeners()
 {
     form.addEventListener('submit',getData);
     document.addEventListener('DOMContentLoaded',loadAllSearched);
+    clearLastUsers.addEventListener('click',clearAllSearched);
 }
 
 function getData(e)
@@ -54,4 +55,10 @@ function loadAllSearched()
         lastUsers.innerHTML += `<li class="list-group-item">${user}</li>`;
     });
 
+}
+
+function clearAllSearched()
+{
+    ui.clearAllSearchedFromUI();
+    Storage.clearAllSearchedFromStorage();
 }
