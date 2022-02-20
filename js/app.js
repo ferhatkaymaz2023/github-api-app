@@ -30,7 +30,8 @@ function getData(e)
                     console.log('User not found');
                 }
                 else 
-                {
+                {   
+                    Storage.addSearchedToStorage(username);
                     ui.showUser(data.user);   
                     ui.showRepo(data.repo);
                 }
