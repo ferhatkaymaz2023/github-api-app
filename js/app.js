@@ -32,6 +32,7 @@ function getData(e)
                 }
                 else 
                 {   
+                    ui.addSearchedToUI(username);
                     Storage.addSearchedToStorage(username);
                     ui.showUser(data.user);   
                     ui.showRepo(data.repo);

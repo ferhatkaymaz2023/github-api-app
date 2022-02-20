@@ -87,7 +87,20 @@
                 </div>
                 `;
             });
-            this.lastUsers.innerHTML = val;
+            this.repoDiv.innerHTML = val;
+        }
+
+        addSearchedToUI(user)
+        {
+            let users = Storage.getAllSearchedFromStorage();
+            
+            if(users.indexOf(user) === -1)
+            {
+                const li = document.createElement('li');
+                li.className = 'list-group-item';
+                li.textContent = user;
+                this.lastUsers.appendChild(li);
+            }
         }
 
     }
