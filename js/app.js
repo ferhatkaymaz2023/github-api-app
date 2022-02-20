@@ -32,6 +32,7 @@ function getData(e)
                 else 
                 {
                     ui.showUser(data.user);   
+                    ui.showRepo(data.repo);
                 }
             })
     }
