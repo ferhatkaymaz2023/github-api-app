@@ -37,6 +37,6 @@ function getData(e)
     }
 
 
-
+    ui.clearInputs();
     e.preventDefault();
 }

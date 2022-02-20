@@ -55,5 +55,9 @@
             `;
         }
 
+        clearInputs()
+        {
+            this.nameInput.value = '';
+        }
 
     }
