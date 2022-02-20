@@ -11,6 +11,7 @@ addEventListeners();
 function addEventListeners()
 {
     form.addEventListener('submit',getData);
+    document.addEventListener('DOMContentLoaded',loadAllSearched);
 }
 
 function getData(e)
@@ -41,4 +42,15 @@ function getData(e)
 
     ui.clearInputs();
     e.preventDefault();
+}
+
+
+function loadAllSearched()
+{
+    let users = Storage.getAllSearchedFromStorage();
+
+    users.forEach(user => {
+        lastUsers.innerHTML += `<li class="list-group-item">${user}</li>`;
+    });
+
 }
